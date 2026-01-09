@@ -1,4 +1,3 @@
-# AIzaSyC5EC_7zDGN7PqU4F7FBj0eg8L3hNxZzQs
 import os
 import json
 from flask import Flask, render_template, request, jsonify
@@ -163,4 +162,5 @@ def find_seats():
         return jsonify({"status": "error", "message": str(e)}), 500
 
 if __name__ == '__main__':
+
     app.run(debug=True, port=5000)
