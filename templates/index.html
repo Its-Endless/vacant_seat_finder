@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Seat Finder</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <style>
+        /* Extra styles for the Strict AI output */
+        .ai-text strong { color: #d32f2f; }
+        .ai-text { font-family: monospace; white-space: pre-line; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>🚄 Broken Journey Optimizer</h1>
+        </header>
+
+        <div class="card">
+            <form id="searchForm">
+                <div class="form-group">
+                    <label>Train Number</label>
+                    <input type="text" id="train_no" placeholder="e.g. 12815" required>
+                </div>
+
+                <div class="form-group">
+                    <label>Journey Date</label>
+                    <input type="date" id="date" required>
+                </div>
+
+                <div class="row">
+                    <div class="form-group half">
+                        <label>Boarding Station</label>
+                        <input type="text" id="source_station" placeholder="e.g. PURI" required>
+                    </div>
+                    <div class="form-group half">
+                        <label>Destination Station</label>
+                        <input type="text" id="dest_station" placeholder="e.g. NDLS">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label>Preferred Class</label>
+                    <select id="class_pref">
+                        <option value="ALL">Check All Classes</option>
+                        <option value="3A">3rd AC (3A/3E)</option>
+                        <option value="2A">2nd AC (2A)</option>
+                        <option value="1A">1st AC (1A)</option>
+                        <option value="SL">Sleeper (SL)</option>
+                    </select>
+                </div>
+
+                <button type="submit" id="submitBtn">Find Vacant Seats</button>
+            </form>
+        </div>
+
+        <div id="resultsArea" class="hidden">
+            <div id="loading" class="hidden">
+                <div class="spinner"></div>
+                <p>Bot is working... Check Chrome window!</p>
+            </div>
+
+            <div id="aiBox" class="ai-card hidden">
+                <h3>🤖 Recommended Options</h3>
+                <div id="aiContent" class="ai-text"></div>
+            </div>
+            
+            <h3 style="margin-top: 30px;">📊 All Vacant Fragments Found</h3>
+            <table id="resultsTable">
+                <thead>
+                    <tr>
+                        <th>Coach</th>
+                        <th>Seat</th>
+                        <th>From</th>
+                        <th>To</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody></tbody>
+            </table>
+            <div id="viewMoreContainer" style="text-align: center; margin-top: 15px;"></div>
+        </div>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

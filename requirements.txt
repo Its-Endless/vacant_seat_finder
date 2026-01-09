@@ -1,0 +1,6 @@
+Flask
+selenium
+selenium-wire
+webdriver-manager
+google-genai
+python-dotenv

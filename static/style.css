@@ -1,0 +1,119 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #e0e0e0;
+    --accent: #00d4ff;
+    --accent-hover: #00b8d4;
+}
+
+body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+h1 { text-align: center; color: var(--accent); margin-bottom: 5px; }
+p { text-align: center; color: #888; margin-top: 0; }
+
+.card {
+    background-color: var(--card-bg);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+
+.form-group { margin-bottom: 20px; }
+label { display: block; margin-bottom: 8px; font-weight: bold; }
+input {
+    width: 100%;
+    padding: 12px;
+    background: #2c2c2c;
+    border: 1px solid #444;
+    color: white;
+    border-radius: 6px;
+    box-sizing: border-box; /* Fixes padding issues */
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background-color: var(--accent);
+    border: none;
+    border-radius: 6px;
+    color: #000;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.2s;
+}
+
+button:hover { background-color: var(--accent-hover); }
+
+/* Results Section */
+.hidden { display: none; }
+#resultsArea { margin-top: 30px; }
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    background: var(--card-bg);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #333;
+}
+
+th { background-color: #333; color: var(--accent); }
+
+/* Add to style.css */
+.ai-card {
+    background: #e3f2fd; /* Light Blue */
+    border-left: 5px solid #2196F3;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.ai-card h3 {
+    margin-top: 0;
+    color: #1565C0;
+}
+
+.ai-text {
+    font-size: 1.1em;
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Add to style.css */
+
+.view-more-btn {
+    background-color: #607d8b; /* Blue Grey */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-more-btn:hover {
+    background-color: #455a64;
+}
