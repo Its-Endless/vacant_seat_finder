@@ -35,8 +35,8 @@ Follow these simple steps to run the project on your machine.
 
 ### 1. Clone the Repository
 ```bash
-git clone 
-cd broken-journey-optimizer
+git clone https://github.com/Its-Endless/vacant_seat_finder.git
+cd vacant_seat_finder
 
 ```
 
